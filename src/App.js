@@ -8,6 +8,15 @@ function EnviarForm(dados){
   console.log(dados)
 }
 
+function ValidarCPF(cpf) {
+    if(cpf.length != 11){
+        return {valido: false, texto: "CPF deve ter 11 Digitos"}
+    }
+    else{
+      return {valido: true, texto: ''}
+    }
+}
+
 function App() {
   return (
     <Container component="article" maxWidth="md">
@@ -15,7 +24,7 @@ function App() {
         Formulario de Cadastro
       </Typography>
    
-      <FormularioCadastro onSubmit={EnviarForm}/>
+      <FormularioCadastro onSubmit={EnviarForm} ValidarCPF={ValidarCPF}/>
     </Container>
   );
 }
