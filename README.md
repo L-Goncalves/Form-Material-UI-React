@@ -1,8 +1,10 @@
 # Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `git clone https://github.com/L-Goncalves/Form-Material-UI-React.git`
 
-## Available Scripts
+### `yarn`
+
+### `cd Form-Material-UI-React`
 
 In the project directory, you can run:
 
