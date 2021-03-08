@@ -24,7 +24,7 @@ function App() {
         Formulario de Cadastro
       </Typography>
    
-      <FormularioCadastro onSubmit={EnviarForm} ValidarCPF={ValidarCPF}/>
+      <FormularioCadastro aoEnviar={EnviarForm} ValidarCPF={ValidarCPF}/>
     </Container>
   );
 }
