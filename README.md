@@ -1,5 +1,7 @@
 # Getting Started
 
+<img src="./img/Untitled.gif" />
+
 ### ```git clone https://github.com/L-Goncalves/Form-Material-UI-React.git```
 
 ### ```yarn```
