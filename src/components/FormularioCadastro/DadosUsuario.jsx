@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { TextField, Button } from "@material-ui/core";
+import ValidacoesCadastro from '../../contexts/validacoes-cadastro';
+
 
 function DadosUsuario({ aoEnviar }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+
+  const validacoes = useContext(ValidacoesCadastro);
+
   return (
     <form
       onSubmit={(event) => {

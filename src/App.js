@@ -3,6 +3,7 @@ import {Container, Typography } from '@material-ui/core/'
 import 'fontsource-roboto';
 import './App.css';
 import {ValidarCPF, ValidarSenha} from './models/cadastro.js'
+import ValidacoesCadastro from './contexts/validacoes-cadastro'
 
 function EnviarForm(dados){
   console.log(dados)
@@ -17,7 +18,14 @@ function App() {
         Formulario de Cadastro
       </Typography>
    
-      <FormularioCadastro aoEnviar={EnviarForm} validacoes={{cpf: ValidarCPF, senha: ValidarSenha}}/>
+      <ValidacoesCadastro.Provider value={{
+        cpf: ValidarCPF, 
+        senha: ValidarSenha}}
+        >
+
+        <FormularioCadastro aoEnviar={EnviarForm} />
+      </ValidacoesCadastro.Provider>
+
     </Container>
   );
 }

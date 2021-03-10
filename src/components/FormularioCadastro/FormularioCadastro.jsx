@@ -3,6 +3,7 @@ import DadosPessoais from './DadosPessoais'
 import DadosUsuario from './DadosUsuario'
 import DadosEntrega from './DadosEntrega';
 import {StepLabel, Stepper, Typography, Step} from '@material-ui/core'
+import ValidacoesCadastro from '../../contexts/validacoes-cadastro';
 
 
 function FormularioCadastro({aoEnviar, validacoes}){
@@ -19,6 +20,7 @@ function FormularioCadastro({aoEnviar, validacoes}){
 
 
     const formularios = [
+        
         <DadosUsuario aoEnviar={coletarDados} validacoes={validacoes}/>, 
         <DadosPessoais aoEnviar={coletarDados} validacoes={validacoes}/>,
         <DadosEntrega aoEnviar={coletarDados} validacoes={validacoes}/>,
